@@ -32,7 +32,7 @@
    <div class="container">
       <div class="navbar-header">
          <a class="navbar-brand" href="{{ url_for('site.index') }}">
-            shufa
+            书法
          </a>
       </div>
 
@@ -59,21 +59,21 @@
          </form>
 
          <ul class="nav navbar-nav navbar-right">
-            {% if g.user %}
-               <li id="nav-settings">
-                  <a href="#">{{ g.user.name }}</a>
-               </li>
-               <li>
-                  <a href="#">登出</a>
-               </li>
-            {% else %}
-               <li id="nav-signin">
-                  <a href="#">登录</a>
-               </li>
-               <li id="nav-signup">
-                  <a href="#">注册</a>
-               </li>
-            {% endif %}
+            {#            {% if g.user %}#}
+            {#               <li id="nav-settings">#}
+            {#                  <a href="#">{{ g.user.name }}</a>#}
+            {#               </li>#}
+            {#               <li>#}
+            {#                  <a href="#">登出</a>#}
+            {#               </li>#}
+            {#            {% else %}#}
+            {#               <li id="nav-signin">#}
+            {#                  <a href="#">登录</a>#}
+            {#               </li>#}
+            {#               <li id="nav-signup">#}
+            {#                  <a href="#">注册</a>#}
+            {#               </li>#}
+            {#            {% endif %}#}
          </ul>
       </div>
    </div>
