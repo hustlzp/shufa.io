@@ -23,7 +23,7 @@ class Work(db.Model):
 
     dynasty_id = db.Column(db.Integer, db.ForeignKey('dynasty.id'))
     dynasty = db.relationship('Dynasty',
-                              backref=db.backref('artists', lazy='dynamic'))
+                              backref=db.backref('works', lazy='dynamic'))
 
     def __repr__(self):
         return '<Work %s>' % self.title
@@ -34,7 +34,7 @@ class WorkType(db.Model):
     name = db.Column(db.String(20))
 
     def __repr__(self):
-        return '<WorkType %s>' % self.cn
+        return '<WorkType %s>' % self.name
 
 
 class WorkImage(db.Model):

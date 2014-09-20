@@ -48,6 +48,7 @@ def create_app():
     register_jinja(app)
     register_error_handle(app)
     register_uploadsets(app)
+    register_admin(app)
 
     # before every request
     @app.before_request
@@ -144,6 +145,21 @@ def register_uploadsets(app):
     from .utils.uploadsets import avatars
 
     configure_uploads(app, (avatars))
+
+
+def register_admin(app):
+    """注册Flask-Admin"""
+    from flask.ext.admin import Admin
+    from flask.ext.admin.contrib.sqla import ModelView
+    from .models import db, Work, WorkImage, WorkType, Dynasty, Artist, Museum
+
+    admin = Admin(app)
+    admin.add_view(ModelView(Work, db.session))
+    admin.add_view(ModelView(WorkImage, db.session))
+    admin.add_view(ModelView(WorkType, db.session))
+    admin.add_view(ModelView(Dynasty, db.session))
+    admin.add_view(ModelView(Artist, db.session))
+    admin.add_view(ModelView(Museum, db.session))
 
 
 def _get_template_name(template_reference):

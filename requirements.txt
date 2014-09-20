@@ -8,6 +8,7 @@ Flask-Mail
 Flask-Migrate
 MySQL-python
 Pillow
+flask-admin
 
 livereload
 formic==0.9beta8

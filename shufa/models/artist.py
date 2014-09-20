@@ -7,6 +7,8 @@ class Artist(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50))
     avatar = db.Column(db.String(200))
+    birth_year = db.Column(db.String(20))
+    death_year = db.Column(db.String(20))
     desc = db.Column(db.Text)
     created_at = db.Column(db.DateTime, default=datetime.datetime.now)
 
