@@ -119,9 +119,10 @@ def register_db(app):
 
 def register_routes(app):
     """注册路由"""
-    from .controllers import site
+    from .controllers import site, work
 
     app.register_blueprint(site.bp, url_prefix='')
+    app.register_blueprint(work.bp, url_prefix='/work')
 
 
 def register_error_handle(app):

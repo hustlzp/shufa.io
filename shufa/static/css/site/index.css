@@ -7,6 +7,8 @@
 }
 .wap-work-images .work-image .cover {
   position: absolute;
+  display: block;
+  text-decoration: none;
   top: 0;
   left: 0;
   width: 240px;
@@ -26,4 +28,5 @@
 .wap-work-images .work-image:hover .cover {
   opacity: 0.9;
   cursor: pointer;
+  color: white;
 }

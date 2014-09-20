@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block page_title %}《{{ work.title }}》{% endblock %}
+
+{% block page_content %}
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-8">
+            <img src="{{ work.images[0].image }}" alt="" class="img-responsive"/>
+         </div>
+         <div class="col-sm-4">
+            <h1 class="no-margin-top">
+               {{ work.title }}
+            </h1>
+
+            <p>{{ work.dynasty.name }} / {{ work.artist.name }}</p>
+
+            <small>藏于{{ work.museum.name }}</small>
+         </div>
+      </div>
+   </div>
+{% endblock %}
