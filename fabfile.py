@@ -31,7 +31,7 @@ def deploy():
             with prefix('source venv/bin/activate'):
                 run('pip install -r requirements.txt')
                 run('python manage.py db upgrade')
-            run('sudo supervisorctl restart shufa')
+            run('supervisorctl restart shufa')
 
 
 def restart():
