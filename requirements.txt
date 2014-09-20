@@ -1,7 +1,7 @@
 Flask
 Flask-WTF
 Flask-Script
-Flask-SQLAlchem
+Flask-SQLAlchemy
 flask-debugtoolbar
 Flask-Uploads
 Flask-Mail
