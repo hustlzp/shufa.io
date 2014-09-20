@@ -17,6 +17,21 @@
   color: #555;
   background-color: #e7e7e7;
 }
+.navbar-default {
+  background-color: white;
+  border-color: #e7e7e7;
+}
+.navbar-default .navbar-nav li a {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'PT Serif';
+  color: #000000;
+  line-height: 1;
+  padding: 30px 20px;
+}
+.navbar-default .navbar-nav li:first-child a {
+  padding-left: 0;
+}
 .navbar-form {
   margin: 10px 0;
 }

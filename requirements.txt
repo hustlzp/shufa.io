@@ -9,7 +9,7 @@ Flask-Migrate==1.2.0
 MySQL-python==1.2.5
 Pillow==2.5.3
 
-livereload==2.2.1
+livereload==2.2.2
 formic==0.9beta8
 
 gunicorn==19.1.1
