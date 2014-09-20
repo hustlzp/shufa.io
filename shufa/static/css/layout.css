@@ -1,3 +1,6 @@
+body {
+  font-size: 16px;
+}
 .flash-message {
   background-color: #3fa7cb;
   border: 0;
