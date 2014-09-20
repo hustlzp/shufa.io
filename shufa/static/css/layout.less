@@ -44,18 +44,22 @@ h1 {
   margin-bottom: 40px;
 }
 
-.navbar-default .navbar-nav li {
-  a {
-    font-size: 30px;
-    font-family: 'PT Serif';
-    color: #000000;
-    line-height: 1;
-    padding: 30px 20px;
+@media (min-width: 768px) {
+
+  .navbar-default .navbar-nav li {
+    a {
+      font-size: 30px;
+      font-family: 'PT Serif';
+      color: #000000;
+      line-height: 1;
+      padding: 30px 20px;
+    }
+
+    &:first-child a {
+      padding-left: 0;
+    }
   }
 
-  &:first-child a {
-    padding-left: 0;
-  }
 }
 
 .navbar-form {
