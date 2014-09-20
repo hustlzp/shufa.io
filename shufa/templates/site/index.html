@@ -3,5 +3,16 @@
 {% block page_title %}Flask-Bootstrap{% endblock %}
 {% block page_content %}
    <div class="container">
+      <div class="wap-work-images clearfix">
+         {% for work in works %}
+            <div class="work-image">
+               <img src="{{ work.images[0].image }}?imageView2/1/w/360/h/300/interlace/1/q/100/format/png"
+                    class="img-responsive" alt=""/>
+               <div class="cover">
+                  {{ work.title }}
+               </div>
+            </div>
+         {% endfor %}
+      </div>
    </div>
 {% endblock %}

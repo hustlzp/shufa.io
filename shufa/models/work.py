@@ -44,7 +44,10 @@ class WorkImage(db.Model):
     order = db.Column(db.Integer)
 
     work_id = db.Column(db.Integer, db.ForeignKey('work.id'))
-    work = db.relationship('Work', backref=db.backref('images', lazy='dynamic'))
+    work = db.relationship('Work',
+                           backref=db.backref('images',
+                                              lazy='dynamic',
+                                              order_by="asc(WorkImage.order)"))
 
     @property
     def url(self):
@@ -52,4 +55,4 @@ class WorkImage(db.Model):
         pass
 
     def __repr__(self):
-        return '<WorkImage %s>' % self.filename
+        return '<WorkImage %s>' % self.work.title

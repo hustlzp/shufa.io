@@ -1,0 +1,29 @@
+.wap-work-images .work-image {
+  position: relative;
+  width: 240px;
+  height: 200px;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.wap-work-images .work-image .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 200px;
+  z-index: 100;
+  opacity: 0;
+  font-size: 16px;
+  color: white;
+  padding: 20px 20px;
+  background-color: #000000;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.wap-work-images .work-image:hover .cover {
+  opacity: 0.9;
+  cursor: pointer;
+}
