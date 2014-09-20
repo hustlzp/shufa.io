@@ -27,8 +27,8 @@ class Dynasty(db.Model):
     name = db.Column(db.String(50))
     abbr = db.Column(db.String(50), unique=True)
     desc = db.Column(db.Text())
-    start_year = db.Column(db.Integer)
-    end_year = db.Column(db.Integer)
+    start_year = db.Column(db.String(20))
+    end_year = db.Column(db.String(20))
 
     def __repr__(self):
         return '<Dynasty %s>' % self.name
